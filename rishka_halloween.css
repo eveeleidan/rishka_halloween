@@ -684,6 +684,7 @@ button.close {
     width:100px;
     right:1%;
     top:27%;
+    z-index: 4;
 }
 
 [onclick="window.scroll({top: 0,behavior: 'smooth'})"] {
@@ -701,6 +702,7 @@ button.close {
     width:100px;
     right:1%;
     bottom:15%;
+    z-index: 4;
 }
 
 ::-webkit-scrollbar {
@@ -1015,43 +1017,78 @@ a[onclick="openPodcastModal()"]::before {
 
 @media (max-width: 768px) {
 
+html,
+body {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+}
+
+div#app {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 .navbar {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
     flex-direction: column;
     align-items: center;
     background: #efe9f2 !important;
+    margin: 0 !important;
 }
 
 div.bottombg.p-1 {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
     flex-direction: column;
     background: #efe9f2 !important;
+    margin: 0 !important;
 }
 
 .crumbs {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
     text-align: center;
 }
 
 main.py-4 {
     display: flex !important;
-    flex-direction: column;
+    flex-direction: column !important;
     width: 100% !important;
     max-width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
     padding: 0 !important;
     gap: 10px;
+    box-sizing: border-box !important;
 }
 
-#app > main > div.content,
+#app > main > div.content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 10px 0 !important;
+    padding: 20px !important;
+    order: unset;
+}
+
+
 #app > main > div.left-menu {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
+    box-sizing: border-box !important;
     margin: 10px 0 !important;
+    padding: 15px !important;
     order: unset;
-}
+    }
+
 
 nav.navbar .menu__box {
     background: #efe9f2 !important;
@@ -1065,36 +1102,52 @@ label.menu__btn {
     z-index: 100 !important;
 }
 
+
 div.post-base {
-    width: calc(100% - 5px) !important;
-    margin-left: 5px !important;
-    margin-right: -25px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     padding-left: 5px !important;
+    padding-right: 5px !important;
     margin-top: 25px !important;
     border-left: none !important;
 }
 
 div.post-row {
+    width: 100% !important;
+    max-width: 100% !important;
     margin: 5px 0 0 0 !important;
 }
 
+
 div.comment-base {
-    margin-left: 5px !important;
-    margin-right: -25px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     padding-left: 5px !important;
+    padding-right: 5px !important;
     margin-top: 25px !important;
     border-left: none !important;
 }
 
 div.comment-row {
-    margin-bottom: 15px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 15px 0 !important;
 }
 
 div.comment-header {
-    margin: 0px!important;
+    margin: 0 !important;
+}
 
 .post-avatar {
-    margin-left: -35px !important;
-    margin-right: 5px !important;
+    margin-left: 0px !important;
+    margin-right: 15px !important;
 }
 }
