@@ -1144,7 +1144,8 @@ div.comment-row {
 }
 
 div.comment-header {
-    margin: 0 !important;
+    margin: 0px!important;
+    margin-bottom: 10px!important;
 }
 
 .post-avatar {
